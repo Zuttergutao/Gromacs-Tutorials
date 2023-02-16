@@ -1,0 +1,40 @@
+; Run control
+freezegrps		 = C24
+freezedim		 = Y Y Y
+integrator               = md       
+tinit                    = 0
+dt                       = 0.002
+nsteps                   = 50000   ; 0.1 ns
+
+; Output control
+nstxout                  = 2500
+nstlog                   = 2500
+nstenergy                = 25
+
+; cutoffs
+cutoff-scheme            = verlet
+nstlist                  = 20
+ns_type                  = grid
+pbc                      = xyz
+rlist                    = 1.2
+coulombtype              = PME ;cutoff ; no charges
+rcoulomb                 = 1.2
+vdwtype                  = cutoff
+rvdw                     = 1.2
+
+; Temperature coupling
+tcoupl			 = v-rescale
+tc_grps                  = system
+tau_t                    = 0.1
+ref_t                    = 300
+
+; Pressure coupling
+Pcoupl			 = no
+tau_p                    = 1.0
+compressibility          = 4.5e-05
+ref_p                    = 1.0 
+
+; bond constraints
+constraints              = none
+constraint-algorithm     = lincs
+

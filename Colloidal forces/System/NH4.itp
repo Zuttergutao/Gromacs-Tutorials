@@ -1,0 +1,28 @@
+[ moleculetype ]
+; name  nrexcl
+NH4		3
+
+[ atoms ]
+;   nr    type   resnr  residu    atom    cgnr        charge          mass
+1     opls_286     1     NH4     N      1
+2     opls_289     1     NH4     H1     1
+3     opls_289     1     NH4     H2     1
+4     opls_289     1     NH4     H3     1
+5     opls_289     1     NH4     H4     1
+
+   
+[ bonds ]
+;ai  aj funct 
+1    2    1
+1    3    1
+1    4    1
+1    5    1
+
+[ angles ]
+;ai  aj   ak  funct 
+2    1    3    1
+2    1    4    1
+2    1    5    1
+3    1    4    1
+3    1    5    1
+4    1    5    1

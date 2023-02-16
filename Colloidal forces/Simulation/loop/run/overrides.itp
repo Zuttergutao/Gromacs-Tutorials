@@ -1,0 +1,16 @@
+[ atomtypes ]
+; name bond_type mass charge ptype sigma epsilon
+opls_141B C3 6 12.01100 0.000 A 3.47000e-01 2.76470e-01
+opls_0    DM 1  1.00000 0.000 A 0.00000e+00 0.00000e+00
+
+[ bondtypes ]
+; i j func b0 kb
+  C3 C3 1 0.14200 265265.6
+
+[ angletypes ]
+; i j k func th0 cth
+  C3 C3 C3 1 114.000 488.273 ;
+
+[ dihedraltypes ]
+; i j k l func coefficients
+  C3 C3 C3 C3 3 -4.96013 6.28646 1.30959 -2.63592 0.00000 0.00000 ;fullerene

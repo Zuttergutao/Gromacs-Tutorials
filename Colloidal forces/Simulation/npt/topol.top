@@ -1,0 +1,13 @@
+#include "oplsaa.ff/forcefield.itp"
+#include "overrides.itp"
+#include "oplsaa.ff/spce.itp"
+#include "c240.itp"
+
+[ system ]
+; Name
+Colloid
+
+[ molecules ]
+; Compound	#mols
+SOL		3019
+C240		2

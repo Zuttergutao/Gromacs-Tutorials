@@ -1,0 +1,60 @@
+; Run control
+integrator               = md       
+tinit                    = 0
+dt                       = 0.002
+nsteps                   = 50000   ; 0.1 ns
+
+; Output control
+nstxout                  = 2500
+nstlog                   = 2500
+nstenergy                = 25
+
+; cutoffs
+cutoff-scheme            = verlet
+nstlist                  = 20
+ns_type                  = grid
+pbc                      = xyz
+rlist                    = 1.2
+coulombtype              = PME ;cutoff ; no charges
+rcoulomb                 = 1.2
+vdwtype                  = cutoff
+rvdw                     = 1.2
+
+; Temperature coupling
+tcoupl			 = v-rescale
+tc_grps                  = system
+tau_t                    = 0.1
+ref_t                    = 300
+
+; Pressure coupling
+Pcoupl                   = berendsen
+tau_p                    = 1.0
+compressibility          = 4.5e-05
+ref_p                    = 1.0 
+
+; bond constraints
+constraints              = none
+constraint-algorithm     = lincs
+
+; pull on all the ions
+pull=yes
+pull-ngroups=2
+pull-group1-name=C24_1
+pull-group2-name=C24_2
+pull-ncoords=2
+
+pull-coord1-type=umbrella
+pull-coord1-geometry=distance
+pull-coord1-groups=0 1
+pull-group1-pbcatom=9085
+pull-coord1-origin=2 2 1.5
+pull-coord1-dim=Y Y Y
+pull-coord1-k=6000
+
+pull-coord2-type=umbrella
+pull-coord2-geometry=distance
+pull-coord2-groups=0 2
+pull-group2-pbcatom=9382
+pull-coord2-origin=2 2 4.5
+pull-coord2-dim=Y Y Y
+pull-coord2-k=6000

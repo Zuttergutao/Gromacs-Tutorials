@@ -1,0 +1,38 @@
+define			 = -DFLEXIBLE
+freezegrps               = C24
+freezedim                = Y Y Y
+; minm.mdp - used as input into grompp to generate em.tpr
+; Parameters describing what to do, when to stop and what to save
+
+integrator               = steep    ; Algorithm (steep =steepest descent minimization)
+emtol                    = 100      ; Energy tolerance for stop minimization  < 100.0 kJ/mol/nm
+emstep                   = 0.01     ; Minimization step sizes
+nsteps                   = 50000    ; Mazimum number of (minimization) steps to perform
+nstcgsteep               = 1000      ; Frequency of steepest decent step
+nstcomm                  = 1        ; Center of mass motion removal interval (timesteps)
+
+; Output control
+nstxout                  = 500
+nstxout-compressed       = 500
+nstlog                   = 500
+nstenergy                = 500
+
+; cutoffs
+cutoff-scheme            = verlet
+nstlist                  = 20
+ns_type                  = grid
+pbc                      = xyz
+rlist                    = 1.1
+coulombtype              = PME 
+rcoulomb                 = 1.1
+vdwtype                  = cutoff
+rvdw                     = 1.1
+
+; bond constraints
+constraints              = none    ;tutorials use h-bonds
+constraint-algorithm     = lincs
+
+; temp and pressure control
+tcoupl			 = no
+pcoupl			 = no
+

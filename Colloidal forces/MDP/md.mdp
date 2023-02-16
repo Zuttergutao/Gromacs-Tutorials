@@ -1,0 +1,73 @@
+; Run control
+integrator               = md 
+dt                       = 0.002
+nsteps                   = 500000   ; 1ns
+
+; random seeds
+;ld-seed		 = 12345
+;gen-seed		 = 12345
+
+; Output control
+nstxout                  = 500
+nstlog                   = 25000
+nstenergy                = 500
+
+; Neighbor searching
+nstlist                  = 20
+ns_type                  = grid
+pbc                      = xyz
+
+; cutoff related
+cutoff-scheme		 = verlet
+rlist			 = 1.5
+coulombtype              = PME
+rcoulomb                 = 1.5
+vdwtype			 = cutoff
+rvdw			 = 1.5
+
+; Temperature coupling
+tcoupl			 = v-rescale
+tc_grps                  = system
+tau_t                    = 0.1
+ref_t                    = 300
+
+; Pressure coupling
+pcoupl              =  no
+; pcou              =  berendsen
+tau_p               =  1.
+compressibility     =  5.0e-5
+ref_p               =  1.0
+
+; pull on all the ions
+pull-pbc-ref-prev-step-com=yes
+pull = yes
+pull-ngroups = 2
+pull-group1-name=C24_1
+pull-group2-name = C24_2
+pull-ncoords = 3
+pull-nstxout=50
+pull-nstfout=50
+
+pull-coord1-type = umbrella
+pull-coord1-geometry = direction-periodic
+pull-coord1-groups = 1 2
+pull-coord1-vec = 0 0 1
+pull-coord1-init=3.0
+pull-coord1-dim = N N Y
+pull-coord1-k = 1000
+
+pull-coord2-type = umbrella
+pull-coord2-geometry = distance
+pull-coord2-groups = 0 1
+pull-coord2-origin = 2 2 1.5
+pull-group1-pbcatom=9085
+pull-coord2-dim = Y Y N
+pull-coord2-k = 1000
+
+pull-coord3-type = umbrella
+pull-coord3-geometry = distance
+pull-coord3-groups = 0 2
+pull-group2-pbcatom=9382
+pull-coord3-origin = 2 2 4.5
+pull-coord3-dim = Y Y Y
+pull-coord3-k = 5000
