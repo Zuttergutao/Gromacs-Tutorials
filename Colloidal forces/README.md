@@ -1,14 +1,6 @@
 # 胶体在水中的模拟
 
-> 预告：
->
-> 笔者之前一直做蛋白配体模拟，因此正在写蛋白配体全流程模拟的相关推送文章。
->
-> 该系列文章预计会出11期，从蛋白配体准备、分子对接到结果分析。
->
-> 该文章主要以gromacs为模拟软件，以手把手傻瓜式教学为目的，同时最后几期将会涉及增强采样方法和Amber的使用。
->
-> 目前已经写到了第二期。。。。。后续会一次性推送，敬请期待（临近毕业，可能会鸽）
+
 
 教程来源：[Colloidal forces | MD Simulation Techniques and Applications (psu.edu)](https://sites.psu.edu/simtech/depletion-attraction/)
 
