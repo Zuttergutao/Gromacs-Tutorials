@@ -1,0 +1,29 @@
+define			 = -DFLEXIBLE
+; Run control
+integrator               = steep 
+nsteps                   = 5000
+; EM criteria and other stuff
+emtol                    = 100
+emstep                   = 0.01
+
+; Output control
+nstlog                   = 10
+nstenergy                = 10
+
+; cutoffs
+cutoff-scheme            = verlet
+nstlist                  = 20
+ns_type                  = grid
+pbc                      = xyz
+rlist                    = 1.0
+coulombtype              = PME
+rcoulomb                 = 1.0
+vdwtype                  = cutoff
+rvdw                     = 1.0
+
+; Temperature and pressure coupling are off during EM
+tcoupl                   = no
+pcoupl                   = no
+
+freezegrps		 = Ion
+freezedim		 = Y Y Y

@@ -1,0 +1,36 @@
+; Run control
+integrator               = md
+tinit                    = 0
+dt                       = 0.002
+nsteps                   = 50000    ; 100ps
+
+; Output control
+nstxout                  = 500
+nstlog                   = 500
+nstenergy                = 500
+
+; cutoffs
+cutoff-scheme            = verlet
+nstlist                  = 20 
+ns_type                  = grid
+pbc                      = xyz
+rlist                    = 1.0
+coulombtype              = PME
+rcoulomb                 = 1.0
+vdwtype                  = cutoff
+rvdw                     = 1.0
+
+; Temperature coupling
+tcoupl			 = v-rescale
+tc_grps                  = system
+tau_t                    = 0.1
+ref_t                    = 300
+
+; Pressure coupling 
+Pcoupl                   = berendsen
+tau_p                    = 0.5
+compressibility          = 4.5e-05
+ref_p                    = 1.0 
+
+freezegrps		 = Ion
+freezedim		 = Y Y Y

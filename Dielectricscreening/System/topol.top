@@ -1,0 +1,13 @@
+#include "oplsaa.ff/forcefield.itp"
+#include "oplsaa.ff/ions.itp"
+#include "oplsaa.ff/spce.itp"
+
+[ system ]
+; Name
+H2O
+
+[ molecules ]
+; Compound             #mols
+NA			1
+SOL			509
+
