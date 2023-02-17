@@ -483,7 +483,7 @@
 
 ### 计算和绘制偶极子
 
-<img src="C:\Users\CASEA\Desktop\Dielectricscreening\loop\dipole.png" alt="dipole" style="zoom:25%;" />
+<img src="loop\dipole.png" alt="dipole" style="zoom:25%;" />
 
 使用原子位置计算偶极子;
 
@@ -501,7 +501,7 @@
 
 ### 平均力vs距离
 
-<img src="C:\Users\CASEA\Desktop\Dielectricscreening\loop\averageforce.png" alt="averageforce" style="zoom:24%;" />
+<img src="loop\averageforce.png" alt="averageforce" style="zoom:24%;" />
 
 对于半径范围[xmin,xmax]取nx等分，对于这nx区间内的force取平均值，绘制不同区间内力与距离的关系。类似地，也将此过程应用到偶极与电荷上。
 
@@ -509,22 +509,22 @@
 
 ### 平均偶极子vs距离
 
-<img src="C:\Users\CASEA\Desktop\Dielectricscreening\loop\avgdipole.png" alt="avgdipole" style="zoom:24%;" />
+<img src="loop\avgdipole.png" alt="avgdipole" style="zoom:24%;" />
 
 平均偶极子在邻近壳层很强，随着与Na+离子的距离而衰减，并显示了对应于相邻壳层的振荡。最大偶极投影(因此水分子的偶极矩)约为0.5 eA，因此最靠近Na+离子的偶极几乎完全定向。
 
 ### 平均电荷vs距离
 
-<img src="C:\Users\CASEA\Desktop\Dielectricscreening\loop\avgcharge.png" alt="avgcharge" style="zoom:24%;" />
+<img src="loop\avgcharge.png" alt="avgcharge" style="zoom:24%;" />
 
 计算存在的每个原子的平均电荷与到盒子中心的距离。
 图 6 显示每个原子的平均电荷在 Na+ 离子附近呈强负性；这反映了近邻壳层中定向水偶极子的氧“头”的存在，其点电荷为 -0.8476。稍远一点，每个原子的电荷为正，对应于定向近邻偶极子的氢“尾巴”，其点电荷为 +0.4238。
 
 ### Na-O、Na-H相关函数
 
-<img src="C:\Users\CASEA\Desktop\Dielectricscreening\loop\gr(O).png" alt="gr(O)" style="zoom:24%;" />
+<img src="loop\gr(O).png" alt="gr(O)" style="zoom:24%;" />
 
-![gr(H)](C:\Users\CASEA\Desktop\Dielectricscreening\loop\gr(H).png)
+![gr(H)](loop\gr(H).png)
 
 我们可以从 O 和 H 原子到盒子中心的距离数据中计算 O 和 H 原子的平均密度。本质上是 Na-O 和 Na-H 径向分布函数。
 
@@ -532,7 +532,7 @@
 
 ### 电荷密度与距离
 
-![qr(c)](C:\Users\CASEA\Desktop\Dielectricscreening\loop\qr(c).png)
+![qr(c)](loop\qr(c).png)
 
 最后绘制电荷密度与距离的分布图
 图显示了由此产生的电荷密度，它表现出强烈的负峰和正峰，对应于近邻壳层中强取向的偶极子，然后是弱和扩散的第二邻峰。
